@@ -1,0 +1,37 @@
+[
+  {
+    "id": "gentle-cleanser",
+    "nameBn": "মৃদু ক্লিনজার",
+    "whyBn": "মুখের ময়লা পরিষ্কার করে, কিন্তু ত্বক শুষ্ক করে না।",
+    "source": "general-guidelines",
+    "status": "draft_review_planned"
+  },
+  {
+    "id": "salicylic-acid-2-percent",
+    "nameBn": "স্যালিসিলিক এসিড ২%",
+    "whyBn": "লোমকূপের ভেতরের ময়লা পরিষ্কার করে ও ব্রণের প্রকোপ কমায়।",
+    "source": "general-guidelines",
+    "status": "draft_review_planned"
+  },
+  {
+    "id": "moisturizer",
+    "nameBn": "ময়েশ্চারাইজার",
+    "whyBn": "ত্বকের আর্দ্রতা ধরে রাখে এবং সুরক্ষা স্তর মজবুত করে।",
+    "source": "general-guidelines",
+    "status": "draft_review_planned"
+  },
+  {
+    "id": "sunscreen",
+    "nameBn": "সানস্ক্রিন",
+    "whyBn": "রোদের ক্ষতিকর ইউভি রশ্মি থেকে ত্বককে রক্ষা করে।",
+    "source": "general-guidelines",
+    "status": "draft_review_planned"
+  },
+  {
+    "id": "niacinamide",
+    "nameBn": "নিয়াসিনামাইড",
+    "whyBn": "ত্বকের লালচে ভাব ও দাগ কমাতে সাহায্য করে।",
+    "source": "general-guidelines",
+    "status": "draft_review_planned"
+  }
+]

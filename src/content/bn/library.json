@@ -1,0 +1,26 @@
+[
+  {
+    "id": "sun-protection",
+    "text": "সূর্যের অতিবেগুনি রশ্মি ত্বকের ক্ষতি করে। প্রতিদিন অন্তত এসপিএফ ৩০ যুক্ত সানস্ক্রিন ব্যবহার করা উচিত।",
+    "source": "general-guidelines",
+    "status": "draft_review_planned"
+  },
+  {
+    "id": "cleansing-basics",
+    "text": "দিনে দুইবারের বেশি মুখ ধোয়ার প্রয়োজন নেই। অতিরিক্ত ধুলে ত্বক শুষ্ক হতে পারে।",
+    "source": "general-guidelines",
+    "status": "draft_review_planned"
+  },
+  {
+    "id": "hydration",
+    "text": "ত্বক তৈলাক্ত হলেও আর্দ্রতা ধরে রাখতে ময়েশ্চারাইজার প্রয়োজন। হালকা ধরনের ময়েশ্চারাইজার ভালো কাজ করে।",
+    "source": "general-guidelines",
+    "status": "draft_review_planned"
+  },
+  {
+    "id": "irritation",
+    "text": "নতুন পণ্য ব্যবহারে জ্বালা, লালচে ভাব বা ফুলে গেলে তা অবিলম্বে ব্যবহার বন্ধ করতে হবে এবং ত্বক পরিষ্কার পানি দিয়ে ধুয়ে ফেলতে হবে।",
+    "source": "general-guidelines",
+    "status": "draft_review_planned"
+  }
+]
