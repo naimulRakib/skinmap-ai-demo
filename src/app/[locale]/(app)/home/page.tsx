@@ -16,12 +16,19 @@ export default function HomePage() {
 
   useEffect(() => {
     async function loadData() {
-      const plan = await repository.getRoutinePlan();
+      let plan = await repository.getRoutinePlan();
+      
+      // Demo Fix: If profile exists in localStorage but routine is missing from memory
+      // (e.g. user refreshed the page), automatically re-seed the demo data!
+      if (!plan && profile) {
+        await repository.loadPersona("persona-a");
+        plan = await repository.getRoutinePlan();
+      }
+
       setRoutine(plan);
 
       const checkIns = await repository.getRecentCheckIns(1);
       if (checkIns.length > 0) {
-        // Just for demo, assume the latest checkin is today's
         setCheckIn(checkIns[0]);
       }
     }
