@@ -14,7 +14,8 @@ const ALL_BLOCKS = blocksData as RoutineBlock[];
 /**
  * Builds a basic routine plan from approved blocks.
  */
-export function buildInitialRoutine(profileId: string): { morning: RoutineStep[]; evening: RoutineStep[] } {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export function buildInitialRoutine(_profileId: string): { morning: RoutineStep[]; evening: RoutineStep[] } {
   // Demo hardcoded logic: AM (Cleanser, Sunscreen), PM (Cleanser, Moisturizer)
   const cleanser = ALL_BLOCKS.find((b) => b.id === "gentle-cleanser")!;
   const sunscreen = ALL_BLOCKS.find((b) => b.id === "sunscreen")!;

@@ -1,0 +1,169 @@
+{
+  "profile": {
+    "id": "persona-a",
+    "displayName": "ডেমো ব্যবহারকারী ক",
+    "mainConcern": "ব্রণ ও লালচে দাগ",
+    "skinTendency": "combination",
+    "currentProducts": ["ফেসওয়াশ", "সানস্ক্রিন", "ময়েশ্চারাইজার"],
+    "sunscreenHabit": "daily",
+    "cityId": "dhaka",
+    "createdAt": "2026-09-20T10:00:00Z",
+    "updatedAt": "2026-09-20T10:00:00Z",
+    "isSynthetic": true
+  },
+  "consent": {
+    "id": "consent-a",
+    "profileId": "persona-a",
+    "coreUse": true,
+    "imageAnalysis": true,
+    "expertShare": false,
+    "updatedAt": "2026-09-20T10:00:00Z"
+  },
+  "scans": [
+    {
+      "scan": {
+        "id": "scan-a-1",
+        "profileId": "persona-a",
+        "capturedAt": "2026-09-26T08:00:00Z",
+        "timeOfDay": "morning",
+        "brightnessBucket": "medium",
+        "cameraFacing": "front",
+        "isFilterFree": true,
+        "thumbnailBlobKey": null,
+        "source": "user-reported",
+        "isSynthetic": true
+      },
+      "observation": {
+        "id": "obs-a-1",
+        "scanId": "scan-a-1",
+        "quality": "ok",
+        "regions": [
+          { "name": "forehead", "observations": ["সামান্য ব্রণের দাগ দেখা যাচ্ছে"], "confidence": "high" },
+          { "name": "leftCheek", "observations": ["পরিষ্কার মনে হচ্ছে"], "confidence": "high" },
+          { "name": "rightCheek", "observations": ["পরিষ্কার মনে হচ্ছে"], "confidence": "high" },
+          { "name": "nose", "observations": ["হালকা তৈলাক্ত ভাব"], "confidence": "high" },
+          { "name": "chin", "observations": ["কিছুটা লালচে"], "confidence": "high" }
+        ],
+        "notes": "",
+        "source": "image-estimated",
+        "aiMode": "template",
+        "createdAt": "2026-09-26T08:00:00Z"
+      }
+    },
+    {
+      "scan": {
+        "id": "scan-a-2",
+        "profileId": "persona-a",
+        "capturedAt": "2026-10-10T08:00:00Z",
+        "timeOfDay": "morning",
+        "brightnessBucket": "medium",
+        "cameraFacing": "front",
+        "isFilterFree": true,
+        "thumbnailBlobKey": null,
+        "source": "user-reported",
+        "isSynthetic": true
+      },
+      "observation": {
+        "id": "obs-a-2",
+        "scanId": "scan-a-2",
+        "quality": "ok",
+        "regions": [
+          { "name": "forehead", "observations": ["দাগগুলো আগের চেয়ে হালকা দেখাচ্ছে"], "confidence": "high" },
+          { "name": "leftCheek", "observations": ["পরিষ্কার"], "confidence": "high" },
+          { "name": "rightCheek", "observations": ["পরিষ্কার"], "confidence": "high" },
+          { "name": "nose", "observations": ["স্বাভাবিক"], "confidence": "high" },
+          { "name": "chin", "observations": ["লালচে ভাব কমেছে"], "confidence": "high" }
+        ],
+        "notes": "",
+        "source": "image-estimated",
+        "aiMode": "template",
+        "createdAt": "2026-10-10T08:00:00Z"
+      }
+    }
+  ],
+  "checkIns": [
+    {
+      "id": "checkin-a-1",
+      "profileId": "persona-a",
+      "date": "2026-10-04T00:00:00Z",
+      "completedStepIds": ["am-1", "am-2", "pm-1", "pm-2"],
+      "irritationLevel": 0,
+      "redFlags": [],
+      "note": null,
+      "source": "user-reported",
+      "isSynthetic": true
+    },
+    {
+      "id": "checkin-a-2",
+      "profileId": "persona-a",
+      "date": "2026-10-05T00:00:00Z",
+      "completedStepIds": ["am-1", "am-2", "pm-1", "pm-2"],
+      "irritationLevel": 0,
+      "redFlags": [],
+      "note": null,
+      "source": "user-reported",
+      "isSynthetic": true
+    },
+    {
+      "id": "checkin-a-3",
+      "profileId": "persona-a",
+      "date": "2026-10-06T00:00:00Z",
+      "completedStepIds": ["am-1", "pm-1", "pm-2"],
+      "irritationLevel": 0,
+      "redFlags": [],
+      "note": "সকালে তাড়াহুড়ো ছিল",
+      "source": "user-reported",
+      "isSynthetic": true
+    },
+    {
+      "id": "checkin-a-4",
+      "profileId": "persona-a",
+      "date": "2026-10-07T00:00:00Z",
+      "completedStepIds": ["am-1", "am-2", "pm-1", "pm-2"],
+      "irritationLevel": 0,
+      "redFlags": [],
+      "note": null,
+      "source": "user-reported",
+      "isSynthetic": true
+    },
+    {
+      "id": "checkin-a-5",
+      "profileId": "persona-a",
+      "date": "2026-10-08T00:00:00Z",
+      "completedStepIds": ["am-1", "am-2", "pm-1", "pm-2"],
+      "irritationLevel": 0,
+      "redFlags": [],
+      "note": null,
+      "source": "user-reported",
+      "isSynthetic": true
+    },
+    {
+      "id": "checkin-a-6",
+      "profileId": "persona-a",
+      "date": "2026-10-09T00:00:00Z",
+      "completedStepIds": ["am-1", "am-2", "pm-1", "pm-2"],
+      "irritationLevel": 0,
+      "redFlags": [],
+      "note": "ত্বক ভালো লাগছে",
+      "source": "user-reported",
+      "isSynthetic": true
+    }
+  ],
+  "routinePlan": {
+    "id": "routine-a",
+    "profileId": "persona-a",
+    "morningSteps": [
+      { "id": "am-1", "blockId": "gentle-cleanser", "nameBn": "মৃদু ক্লিনজার", "whyBn": "মুখের ময়লা পরিষ্কার করে।", "order": 1, "contentSource": "guidelines", "contentStatus": "draft_review_planned" },
+      { "id": "am-2", "blockId": "sunscreen", "nameBn": "সানস্ক্রিন", "whyBn": "রোদের ক্ষতি থেকে বাঁচায়।", "order": 2, "contentSource": "guidelines", "contentStatus": "draft_review_planned" }
+    ],
+    "eveningSteps": [
+      { "id": "pm-1", "blockId": "gentle-cleanser", "nameBn": "মৃদু ক্লিনজার", "whyBn": "সারাদিনের ময়লা সরায়।", "order": 1, "contentSource": "guidelines", "contentStatus": "draft_review_planned" },
+      { "id": "pm-2", "blockId": "moisturizer", "nameBn": "ময়েশ্চারাইজার", "whyBn": "আর্দ্রতা ধরে রাখে।", "order": 2, "contentSource": "guidelines", "contentStatus": "draft_review_planned" }
+    ],
+    "createdAt": "2026-09-20T10:00:00Z",
+    "changedAt": "2026-09-20T10:00:00Z",
+    "source": "rule-derived",
+    "isFrozen": false
+  },
+  "decisions": []
+}

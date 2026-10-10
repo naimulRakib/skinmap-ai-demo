@@ -21,7 +21,7 @@ export interface RuleResult {
 }
 
 export interface EngineResult extends RuleResult {
-  inputsUsed: { field: string; value: any; source: DataSource }[];
+  inputsUsed: { field: string; value: unknown; source: DataSource }[];
 }
 
 export interface DecisionRule {

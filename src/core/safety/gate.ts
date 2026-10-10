@@ -43,7 +43,7 @@ export function validateText(text: string): GateResult {
 /**
  * Helper for validating a full JSON object's string fields.
  */
-export function validateObjectStrings(obj: Record<string, any>): GateResult {
+export function validateObjectStrings(obj: Record<string, unknown>): GateResult {
   for (const key in obj) {
     if (typeof obj[key] === "string") {
       const res = validateText(obj[key]);

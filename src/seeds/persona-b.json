@@ -1,0 +1,136 @@
+{
+  "profile": {
+    "id": "persona-b",
+    "displayName": "ডেমো ব্যবহারকারী খ",
+    "mainConcern": "ত্বক শুষ্ক ও কালচে",
+    "skinTendency": "dry",
+    "currentProducts": [],
+    "sunscreenHabit": "rarely",
+    "cityId": "chittagong",
+    "createdAt": "2026-09-20T10:00:00Z",
+    "updatedAt": "2026-09-20T10:00:00Z",
+    "isSynthetic": true
+  },
+  "consent": {
+    "id": "consent-b",
+    "profileId": "persona-b",
+    "coreUse": true,
+    "imageAnalysis": true,
+    "expertShare": false,
+    "updatedAt": "2026-09-20T10:00:00Z"
+  },
+  "scans": [
+    {
+      "scan": {
+        "id": "scan-b-1",
+        "profileId": "persona-b",
+        "capturedAt": "2026-09-26T08:00:00Z",
+        "timeOfDay": "morning",
+        "brightnessBucket": "medium",
+        "cameraFacing": "front",
+        "isFilterFree": true,
+        "thumbnailBlobKey": null,
+        "source": "user-reported",
+        "isSynthetic": true
+      },
+      "observation": {
+        "id": "obs-b-1",
+        "scanId": "scan-b-1",
+        "quality": "ok",
+        "regions": [
+          { "name": "forehead", "observations": ["শুষ্ক ও কালচে"], "confidence": "high" },
+          { "name": "leftCheek", "observations": ["খসখসে"], "confidence": "high" },
+          { "name": "rightCheek", "observations": ["খসখসে"], "confidence": "high" },
+          { "name": "nose", "observations": ["কালচে ভাব"], "confidence": "high" },
+          { "name": "chin", "observations": ["শুষ্ক"], "confidence": "high" }
+        ],
+        "notes": "",
+        "source": "image-estimated",
+        "aiMode": "template",
+        "createdAt": "2026-09-26T08:00:00Z"
+      }
+    },
+    {
+      "scan": {
+        "id": "scan-b-2",
+        "profileId": "persona-b",
+        "capturedAt": "2026-10-10T08:00:00Z",
+        "timeOfDay": "morning",
+        "brightnessBucket": "medium",
+        "cameraFacing": "front",
+        "isFilterFree": true,
+        "thumbnailBlobKey": null,
+        "source": "user-reported",
+        "isSynthetic": true
+      },
+      "observation": {
+        "id": "obs-b-2",
+        "scanId": "scan-b-2",
+        "quality": "ok",
+        "regions": [
+          { "name": "forehead", "observations": ["আগের মতোই শুষ্ক"], "confidence": "high" },
+          { "name": "leftCheek", "observations": ["খসখসে ভাব একই আছে"], "confidence": "high" },
+          { "name": "rightCheek", "observations": ["কোনো উন্নতি নেই"], "confidence": "high" },
+          { "name": "nose", "observations": ["কালচে ভাব"], "confidence": "high" },
+          { "name": "chin", "observations": ["একটু শুষ্ক"], "confidence": "high" }
+        ],
+        "notes": "",
+        "source": "image-estimated",
+        "aiMode": "template",
+        "createdAt": "2026-10-10T08:00:00Z"
+      }
+    }
+  ],
+  "checkIns": [
+    {
+      "id": "checkin-b-1",
+      "profileId": "persona-b",
+      "date": "2026-10-04T00:00:00Z",
+      "completedStepIds": ["am-1", "pm-1"],
+      "irritationLevel": 0,
+      "redFlags": [],
+      "note": null,
+      "source": "user-reported",
+      "isSynthetic": true
+    },
+    {
+      "id": "checkin-b-2",
+      "profileId": "persona-b",
+      "date": "2026-10-06T00:00:00Z",
+      "completedStepIds": ["pm-1"],
+      "irritationLevel": 0,
+      "redFlags": [],
+      "note": "ভুলে গিয়েছিলাম",
+      "source": "user-reported",
+      "isSynthetic": true
+    },
+    {
+      "id": "checkin-b-3",
+      "profileId": "persona-b",
+      "date": "2026-10-09T00:00:00Z",
+      "completedStepIds": ["am-1"],
+      "irritationLevel": 0,
+      "redFlags": [],
+      "note": null,
+      "source": "user-reported",
+      "isSynthetic": true
+    }
+  ],
+  "routinePlan": {
+    "id": "routine-b",
+    "profileId": "persona-b",
+    "morningSteps": [
+      { "id": "am-1", "blockId": "gentle-cleanser", "nameBn": "মৃদু ক্লিনজার", "whyBn": "মুখের ময়লা পরিষ্কার করে।", "order": 1, "contentSource": "guidelines", "contentStatus": "draft_review_planned" },
+      { "id": "am-2", "blockId": "sunscreen", "nameBn": "সানস্ক্রিন", "whyBn": "রোদের ক্ষতি থেকে বাঁচায়।", "order": 2, "contentSource": "guidelines", "contentStatus": "draft_review_planned" }
+    ],
+    "eveningSteps": [
+      { "id": "pm-1", "blockId": "gentle-cleanser", "nameBn": "মৃদু ক্লিনজার", "whyBn": "সারাদিনের ময়লা সরায়।", "order": 1, "contentSource": "guidelines", "contentStatus": "draft_review_planned" },
+      { "id": "pm-2", "blockId": "moisturizer", "nameBn": "ময়েশ্চারাইজার", "whyBn": "আর্দ্রতা ধরে রাখে।", "order": 2, "contentSource": "guidelines", "contentStatus": "draft_review_planned" }
+    ],
+    "createdAt": "2026-09-20T10:00:00Z",
+    "changedAt": "2026-09-20T10:00:00Z",
+    "source": "rule-derived",
+    "isFrozen": false
+  },
+  "decisions": []
+}

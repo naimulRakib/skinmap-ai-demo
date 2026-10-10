@@ -1,0 +1,148 @@
+{
+  "profile": {
+    "id": "persona-c",
+    "displayName": "ডেমো ব্যবহারকারী গ",
+    "mainConcern": "প্রচুর ব্রণ ও লালচে ভাব",
+    "skinTendency": "oily",
+    "currentProducts": ["সাবান", "নতুন সিরাম"],
+    "sunscreenHabit": "never",
+    "cityId": "rajshahi",
+    "createdAt": "2026-09-20T10:00:00Z",
+    "updatedAt": "2026-09-20T10:00:00Z",
+    "isSynthetic": true
+  },
+  "consent": {
+    "id": "consent-c",
+    "profileId": "persona-c",
+    "coreUse": true,
+    "imageAnalysis": true,
+    "expertShare": true,
+    "updatedAt": "2026-09-20T10:00:00Z"
+  },
+  "scans": [
+    {
+      "scan": {
+        "id": "scan-c-1",
+        "profileId": "persona-c",
+        "capturedAt": "2026-09-26T08:00:00Z",
+        "timeOfDay": "morning",
+        "brightnessBucket": "medium",
+        "cameraFacing": "front",
+        "isFilterFree": true,
+        "thumbnailBlobKey": null,
+        "source": "user-reported",
+        "isSynthetic": true
+      },
+      "observation": {
+        "id": "obs-c-1",
+        "scanId": "scan-c-1",
+        "quality": "ok",
+        "regions": [
+          { "name": "forehead", "observations": ["অনেক ব্রণ"], "confidence": "high" },
+          { "name": "leftCheek", "observations": ["লালচে ভাব ও ব্যথা"], "confidence": "high" },
+          { "name": "rightCheek", "observations": ["ব্রণ আছে"], "confidence": "high" },
+          { "name": "nose", "observations": ["তৈলাক্ত"], "confidence": "high" },
+          { "name": "chin", "observations": ["লালচে"], "confidence": "high" }
+        ],
+        "notes": "",
+        "source": "image-estimated",
+        "aiMode": "template",
+        "createdAt": "2026-09-26T08:00:00Z"
+      }
+    },
+    {
+      "scan": {
+        "id": "scan-c-2",
+        "profileId": "persona-c",
+        "capturedAt": "2026-10-10T08:00:00Z",
+        "timeOfDay": "morning",
+        "brightnessBucket": "medium",
+        "cameraFacing": "front",
+        "isFilterFree": true,
+        "thumbnailBlobKey": null,
+        "source": "user-reported",
+        "isSynthetic": true
+      },
+      "observation": {
+        "id": "obs-c-2",
+        "scanId": "scan-c-2",
+        "quality": "ok",
+        "regions": [
+          { "name": "forehead", "observations": ["ব্রণ বেড়েছে"], "confidence": "high" },
+          { "name": "leftCheek", "observations": ["খুব লালচে"], "confidence": "high" },
+          { "name": "rightCheek", "observations": ["নতুন ব্রণ"], "confidence": "high" },
+          { "name": "nose", "observations": ["তৈলাক্ত"], "confidence": "high" },
+          { "name": "chin", "observations": ["ব্যথা আছে"], "confidence": "high" }
+        ],
+        "notes": "",
+        "source": "image-estimated",
+        "aiMode": "template",
+        "createdAt": "2026-10-10T08:00:00Z"
+      }
+    }
+  ],
+  "checkIns": [
+    {
+      "id": "checkin-c-1",
+      "profileId": "persona-c",
+      "date": "2026-10-04T00:00:00Z",
+      "completedStepIds": ["am-1", "am-2", "pm-1", "pm-2"],
+      "irritationLevel": 1,
+      "redFlags": [],
+      "note": null,
+      "source": "user-reported",
+      "isSynthetic": true
+    },
+    {
+      "id": "checkin-c-2",
+      "profileId": "persona-c",
+      "date": "2026-10-05T00:00:00Z",
+      "completedStepIds": ["am-1", "am-2", "pm-1", "pm-2"],
+      "irritationLevel": 2,
+      "redFlags": [],
+      "note": "মুখ জ্বালা করছে",
+      "source": "user-reported",
+      "isSynthetic": true
+    },
+    {
+      "id": "checkin-c-3",
+      "profileId": "persona-c",
+      "date": "2026-10-06T00:00:00Z",
+      "completedStepIds": ["am-1", "pm-1", "pm-2"],
+      "irritationLevel": 2,
+      "redFlags": [],
+      "note": "লাল হয়ে আছে",
+      "source": "user-reported",
+      "isSynthetic": true
+    },
+    {
+      "id": "checkin-c-4",
+      "profileId": "persona-c",
+      "date": "2026-10-07T00:00:00Z",
+      "completedStepIds": ["am-1", "am-2", "pm-1", "pm-2"],
+      "irritationLevel": 3,
+      "redFlags": [],
+      "note": "খুব ব্যথা",
+      "source": "user-reported",
+      "isSynthetic": true
+    }
+  ],
+  "routinePlan": {
+    "id": "routine-c",
+    "profileId": "persona-c",
+    "morningSteps": [
+      { "id": "am-1", "blockId": "gentle-cleanser", "nameBn": "মৃদু ক্লিনজার", "whyBn": "মুখের ময়লা পরিষ্কার করে।", "order": 1, "contentSource": "guidelines", "contentStatus": "draft_review_planned" },
+      { "id": "am-2", "blockId": "sunscreen", "nameBn": "সানস্ক্রিন", "whyBn": "রোদের ক্ষতি থেকে বাঁচায়।", "order": 2, "contentSource": "guidelines", "contentStatus": "draft_review_planned" }
+    ],
+    "eveningSteps": [
+      { "id": "pm-1", "blockId": "gentle-cleanser", "nameBn": "মৃদু ক্লিনজার", "whyBn": "সারাদিনের ময়লা সরায়।", "order": 1, "contentSource": "guidelines", "contentStatus": "draft_review_planned" },
+      { "id": "pm-2", "blockId": "salicylic-acid-2-percent", "nameBn": "স্যালিসিলিক এসিড ২%", "whyBn": "ব্রণ কমাতে সাহায্য করে।", "order": 2, "contentSource": "guidelines", "contentStatus": "draft_review_planned" },
+      { "id": "pm-3", "blockId": "moisturizer", "nameBn": "ময়েশ্চারাইজার", "whyBn": "আর্দ্রতা ধরে রাখে।", "order": 3, "contentSource": "guidelines", "contentStatus": "draft_review_planned" }
+    ],
+    "createdAt": "2026-09-20T10:00:00Z",
+    "changedAt": "2026-09-20T10:00:00Z",
+    "source": "rule-derived",
+    "isFrozen": false
+  },
+  "decisions": []
+}
