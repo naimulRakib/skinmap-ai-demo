@@ -1,4 +1,4 @@
-import type { DecisionContext, EngineResult } from "./types";
+import type { DecisionContext, EngineResult, RuleResult } from "./types";
 import { RULES } from "./rules";
 import { DECISION_THRESHOLDS } from "@/lib/constants";
 
@@ -7,7 +7,7 @@ import { DECISION_THRESHOLDS } from "@/lib/constants";
  * No side effects, no API calls.
  */
 export function decide(ctx: DecisionContext): EngineResult {
-  let matchedResult = null;
+  let matchedResult: RuleResult | null = null;
 
   for (const rule of RULES) {
     const res = rule.evaluate(ctx);

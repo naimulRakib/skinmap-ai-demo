@@ -13,6 +13,15 @@ const SEEDS: Record<string, unknown> = {
   "persona-c": personaC,
 };
 
+type SeedData = {
+  profile: Profile;
+  consent: Consent;
+  scans: { scan: Scan; observation: ScanObservation }[];
+  checkIns: CheckIn[];
+  routinePlan: RoutinePlan;
+  decisions: Decision[];
+};
+
 // We keep scans, check-ins, decisions in memory purely for the demo session.
 // In a real app, these would be in IndexedDB or a remote DB.
 class MemoryStorageAdapter implements StoragePort {
@@ -25,16 +34,17 @@ class MemoryStorageAdapter implements StoragePort {
     const data = SEEDS[personaId];
     if (!data) throw new Error(`Seed data not found for ${personaId}`);
 
+    const seed = data as SeedData;
     // Load into Zustand
-    useAppStore.getState().setProfile(data.profile as Profile);
-    useAppStore.getState().setConsent(data.consent as Consent);
+    useAppStore.getState().setProfile(seed.profile);
+    useAppStore.getState().setConsent(seed.consent);
     useAppStore.getState().setOnboarded(true);
 
     // Load into memory arrays
-    this.scans = [...data.scans];
-    this.checkIns = [...data.checkIns];
-    this.routinePlan = data.routinePlan as RoutinePlan;
-    this.decisions = [...data.decisions];
+    this.scans = [...seed.scans];
+    this.checkIns = [...seed.checkIns];
+    this.routinePlan = seed.routinePlan;
+    this.decisions = [...seed.decisions];
   }
 
   async resetAllData(): Promise<void> {
@@ -115,7 +125,7 @@ class MemoryStorageAdapter implements StoragePort {
   async getLatestDecision(): Promise<Decision | null> {
     if (this.decisions.length === 0) return null;
     return [...this.decisions].sort(
-      (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+      (a, b) => new Date(b.decidedAt).getTime() - new Date(a.decidedAt).getTime()
     )[0];
   }
 }

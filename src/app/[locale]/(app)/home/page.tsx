@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useTranslations } from "next-intl";
 import { useAppStore } from "@/store/app-store";
 import { repository } from "@/adapters/store/repository";
 import type { RoutinePlan, CheckIn } from "@/db/schema";

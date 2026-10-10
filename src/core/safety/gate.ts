@@ -51,7 +51,7 @@ export function validateObjectStrings(obj: Record<string, unknown>): GateResult 
         return res;
       }
     } else if (typeof obj[key] === "object" && obj[key] !== null) {
-      const res = validateObjectStrings(obj[key]);
+      const res = validateObjectStrings(obj[key] as Record<string, unknown>);
       if (!res.pass) return res;
     }
   }
