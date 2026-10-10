@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+/* ── Bengali typography rules ────────────────────────────────────────────
+   Never use text-transform: uppercase or letter-spacing on Bengali text.
+   Line height for body is 1.7, for headings is 1.35.
+──────────────────────────────────────────────────────────────────────── */
+:root {
+  --font-body: var(--font-noto-bengali), system-ui, sans-serif;
+  --font-display: var(--font-hind-siliguri), var(--font-noto-bengali), sans-serif;
+
+  /* Design tokens */
+  --color-navy: #101828;
+  --color-teal: #13b8a6;
+  --color-surface: #f8fafc;
+  --color-amber: #ffb547;
+  --color-coral: #ff7a66;
+  --color-green: #4ade80;
+  --color-soft-blue: #7db7f0;
+}
+
+/* Base styles */
+html {
+  font-family: var(--font-body);
+  font-size: 16px; /* Minimum for Bengali legibility */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  background-color: #f8fafc;
+  color: #101828;
+  line-height: 1.7; /* Bengali body line height */
+}
+
+/* Bengali headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  line-height: 1.35; /* Bengali heading line height */
+  font-weight: 600;
+  /* NO text-transform or letter-spacing for Bengali */
+}
+
+/* No letter-spacing on Bengali text */
+.font-sans, .font-display {
+  letter-spacing: 0;
+}
+
+/* ── Tap targets ────────────────────────────────────────────────────────
+   All interactive elements must be at least 48×48px for touch.
+──────────────────────────────────────────────────────────────────────── */
+button, a, [role="button"], [role="tab"] {
+  min-height: 48px;
+  min-width: 48px;
+}
+
+/* Focus indicators — accessible, teal-tinted */
+:focus-visible {
+  outline: 2px solid var(--color-teal);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+/* ── Status ribbon colors ──────────────────────────────────────────────── */
+.status-green {
+  background: linear-gradient(90deg, #4ade80 0%, #22d3ee 100%);
+}
+.status-amber {
+  background: linear-gradient(90deg, #ffb547 0%, #fb923c 100%);
+}
+.status-coral {
+  background: linear-gradient(90deg, #ff7a66 0%, #f43f5e 100%);
+}
+
+/* ── Shimmer skeleton animation ──────────────────────────────────────── */
+.skeleton {
+  background: linear-gradient(90deg, #e2e8f0 25%, #f1f5f9 50%, #e2e8f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s linear infinite;
+}
+
+/* ── Glass morphism cards ─────────────────────────────────────────────── */
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+/* ── Navy hero gradient ───────────────────────────────────────────────── */
+.navy-hero {
+  background: linear-gradient(160deg, #101828 0%, #1a2d4a 60%, #0d2235 100%);
+}
+
+/* ── Scroll without scrollbar ─────────────────────────────────────────── */
+.scroll-no-bar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scroll-no-bar::-webkit-scrollbar {
+  display: none;
+}
+
+/* ── prefers-reduced-motion: disable all animations ──────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ── Phone frame safe area ─────────────────────────────────────────────── */
+.pb-safe {
+  padding-bottom: max(env(safe-area-inset-bottom), 16px);
+}
