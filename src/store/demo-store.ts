@@ -21,7 +21,7 @@ interface DemoState {
   setDemoDirectorOpen: (open: boolean) => void;
   setForceOffline: (offline: boolean) => void;
   setAiMode: (mode: "live" | "cached" | "template") => void;
-  advanceDay: () => void;
+  advanceDay: (days?: number) => void;
   resetDemo: () => void;
 }
 
@@ -49,8 +49,8 @@ export const useDemoStore = create<DemoState>()(
 
       setAiMode: (mode) => set({ aiMode: mode }),
 
-      advanceDay: () =>
-        set((state) => ({ timeTravelDays: state.timeTravelDays + 1 })),
+      advanceDay: (days = 1) =>
+        set((state) => ({ timeTravelDays: state.timeTravelDays + days })),
 
       resetDemo: () => set({ ...initialState }),
     }),

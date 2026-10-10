@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { X, Clock, RotateCcw, WifiOff, MessageSquare } from "lucide-react";
 import { useDemoStore } from "@/store/demo-store";
 import { PERSONA_IDS, type PersonaId } from "@/lib/constants";
+import { repository } from "@/adapters/store/repository";
 import { cn } from "@/lib/utils";
 
 interface DemoDirectorProps {
@@ -40,6 +41,12 @@ export function DemoDirector({ onClose }: DemoDirectorProps) {
     live: "text-emerald-DEFAULT",
     cached: "text-amber-DEFAULT",
     template: "text-coral-DEFAULT",
+  };
+
+  const handlePersonaChange = async (id: PersonaId) => {
+    setPersona(id);
+    await repository.loadPersona(id);
+    window.location.reload();
   };
 
   return (
@@ -88,7 +95,7 @@ export function DemoDirector({ onClose }: DemoDirectorProps) {
               <button
                 id={`demo-persona-${p.id}`}
                 key={p.id}
-                onClick={() => setPersona(p.id)}
+                onClick={() => handlePersonaChange(p.id)}
                 className={cn(
                   "w-full flex items-center gap-3 p-3 rounded-2xl transition-all duration-200",
                   "text-left text-sm font-medium",
@@ -104,16 +111,27 @@ export function DemoDirector({ onClose }: DemoDirectorProps) {
           </div>
         </div>
 
+        {/* Time Travel */}
+        <div className="mb-4">
+          <p className="text-white/60 text-xs font-medium mb-2 uppercase tracking-wider">
+            Time Travel (Days)
+          </p>
+          <div className="flex gap-2">
+            {[1, 5, 14].map((days) => (
+              <button
+                key={days}
+                onClick={() => { advanceDay(days); window.location.reload(); }}
+                className="flex-1 flex justify-center items-center gap-1 p-2 bg-navy-800 hover:bg-navy-700 rounded-xl text-white/70 hover:text-white text-sm transition-colors"
+              >
+                <Clock size={14} />
+                +{days}
+              </button>
+            ))}
+          </div>
+        </div>
+
         {/* Actions */}
         <div className="grid grid-cols-2 gap-2 mb-4">
-          <button
-            id="demo-advance-day"
-            onClick={advanceDay}
-            className="flex items-center gap-2 p-3 bg-navy-800 hover:bg-navy-700 rounded-2xl text-white/70 hover:text-white text-sm transition-colors"
-          >
-            <Clock size={15} />
-            {t("timeTravel")}
-          </button>
           <button
             id="demo-reset"
             onClick={() => {
