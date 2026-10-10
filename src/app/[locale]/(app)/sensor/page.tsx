@@ -81,6 +81,50 @@ export default function SensorPage() {
         </div>
       </div>
 
+      {/* Detailed Pigment Analysis Card */}
+      <div className="bg-white rounded-3xl p-6 shadow-card border border-surface-200 mb-6">
+        <h2 className="font-semibold text-navy-900 mb-1">রঞ্জক ও টোন বিশ্লেষণ (Pigment Analysis)</h2>
+        <p className="text-xs text-navy-400 mb-4">অপটিক্যাল স্ক্যানার দ্বারা বিস্তারিত পরিমাপ</p>
+        
+        <div className="space-y-4">
+          <div>
+            <div className="flex justify-between text-xs mb-1">
+              <span className="text-navy-700 font-medium">মেলানিন সূচক (Melanin Index)</span>
+              <span className="text-teal-600 font-bold">{connecting ? "--" : "৪৩.২"}</span>
+            </div>
+            <div className="h-2 w-full bg-surface-100 rounded-full overflow-hidden">
+              <div className="h-full bg-teal-500 rounded-full transition-all duration-1000" style={{ width: connecting ? "0%" : "43%" }}></div>
+            </div>
+          </div>
+
+          <div>
+            <div className="flex justify-between text-xs mb-1">
+              <span className="text-navy-700 font-medium">এরিথেমা/লালচে ভাব (Erythema)</span>
+              <span className="text-coral-DEFAULT font-bold">{connecting ? "--" : "১২.৮"}</span>
+            </div>
+            <div className="h-2 w-full bg-surface-100 rounded-full overflow-hidden">
+              <div className="h-full bg-coral-DEFAULT rounded-full transition-all duration-1000" style={{ width: connecting ? "0%" : "13%" }}></div>
+            </div>
+          </div>
+
+          <div>
+            <div className="flex justify-between text-xs mb-1">
+              <span className="text-navy-700 font-medium">পিগমেন্ট সমতা (Pigment Evenness)</span>
+              <span className="text-soft-blue-600 font-bold">{connecting ? "--" : "৮৮%"}</span>
+            </div>
+            <div className="h-2 w-full bg-surface-100 rounded-full overflow-hidden">
+              <div className="h-full bg-soft-blue-500 rounded-full transition-all duration-1000" style={{ width: connecting ? "0%" : "88%" }}></div>
+            </div>
+          </div>
+
+          <div className="pt-2 mt-2 border-t border-surface-100">
+            <p className="text-xs text-navy-600 leading-relaxed">
+              <strong className="text-navy-900">বিশ্লেষণ:</strong> {connecting ? "..." : "আপনার মেলানিন সূচক স্বাভাবিক সীমার মধ্যে আছে। সামান্য লালচে ভাব (Erythema) পরিলক্ষিত হয়েছে, যা সম্ভবত রোদে ঘোরার কারণে। পিগমেন্ট ডিস্ট্রিবিউশন ৮৮% সমান।"}
+            </p>
+          </div>
+        </div>
+      </div>
+
       <div className="bg-soft-blue-50 border border-soft-blue-100 rounded-2xl p-4 flex gap-3 text-sm text-soft-blue-900 mb-6">
         <Info size={20} className="shrink-0 text-soft-blue-600 mt-0.5" />
         <p>{t("disclaimer")} এই ডেমো রিডিংগুলো শুধুমাত্র প্রোটোটাইপের জন্য।</p>
