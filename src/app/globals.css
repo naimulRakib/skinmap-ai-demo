@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+@config "../../tailwind.config.js";
 /* ── Bengali typography rules ────────────────────────────────────────────
    Never use text-transform: uppercase or letter-spacing on Bengali text.
    Line height for body is 1.7, for headings is 1.35.

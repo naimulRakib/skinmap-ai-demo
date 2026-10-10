@@ -37,7 +37,7 @@ export default function ScanPage() {
   return (
     <div className="fixed inset-0 z-50 bg-navy-950 flex flex-col sm:relative sm:h-[844px]">
       {/* Header */}
-      <div className="absolute top-0 left-0 w-full p-6 flex justify-between items-center z-10 bg-gradient-to-b from-navy-950/80 to-transparent pb-10">
+      <div className="absolute top-0 left-0 w-full p-6 flex justify-between items-center z-10 bg-linear-to-b from-navy-950/80 to-transparent pb-10">
         <button 
           onClick={() => router.back()}
           className="w-10 h-10 rounded-full bg-white/10 backdrop-blur flex items-center justify-center text-white"

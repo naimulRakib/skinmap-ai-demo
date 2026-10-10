@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { StartButton } from "./StartButton";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("onboarding");
@@ -11,7 +12,7 @@ export default function OnboardingPage() {
     <div className="min-h-screen navy-hero flex flex-col items-center justify-center p-6 text-center">
       {/* Logo / App Name */}
       <div className="mb-8">
-        <div className="w-20 h-20 rounded-[28px] bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center mx-auto mb-4 shadow-teal">
+        <div className="w-20 h-20 rounded-[28px] bg-linear-to-br from-teal-400 to-teal-600 flex items-center justify-center mx-auto mb-4 shadow-teal">
           <span className="text-3xl">🌿</span>
         </div>
         <h1 className="text-3xl font-display font-bold text-white mb-2">
@@ -24,19 +25,13 @@ export default function OnboardingPage() {
 
       {/* Demo note */}
       <div className="bg-amber-DEFAULT/10 border border-amber-DEFAULT/20 rounded-2xl p-4 mb-8 max-w-xs text-left">
-        <p className="text-amber-DEFAULT text-sm leading-relaxed">
+        <p className="text-white/90 font-medium text-sm leading-relaxed">
           🔔 এটি একটি ডেমো প্রোটোটাইপ। সব ডেটা সিন্থেটিক ও আপনার ডিভাইসে সংরক্ষিত।
         </p>
       </div>
 
       {/* CTA */}
-      <a
-        href="/bn/home"
-        id="onboarding-get-started"
-        className="w-full max-w-xs bg-teal-DEFAULT hover:bg-teal-600 text-white font-semibold py-4 px-8 rounded-chip shadow-teal transition-all duration-200 text-center block"
-      >
-        শুরু করুন
-      </a>
+      <StartButton />
 
       <p className="mt-6 text-white/30 text-xs text-center max-w-xs">
         এটি সাধারণ যত্নের পরামর্শ, চিকিৎসা নির্ণয় নয়।

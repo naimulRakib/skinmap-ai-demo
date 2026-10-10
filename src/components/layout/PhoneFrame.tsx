@@ -27,7 +27,7 @@ export function PhoneFrame({ children, showTalkingPoints = false }: PhoneFramePr
         <div
           className={cn(
             "relative w-[390px] h-[844px] rounded-[48px] overflow-hidden",
-            "ring-[8px] ring-navy-800 shadow-2xl",
+            "ring-8 ring-navy-800 shadow-2xl",
             "bg-surface flex flex-col"
           )}
           style={{

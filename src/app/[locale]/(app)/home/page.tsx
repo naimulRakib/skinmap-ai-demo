@@ -28,6 +28,12 @@ export default function HomePage() {
     loadData();
   }, []);
 
+  useEffect(() => {
+    if (!profile) {
+      window.location.href = "/bn/onboarding";
+    }
+  }, [profile]);
+
   if (!profile || !routine) {
     return (
       <div className="p-6 flex flex-col gap-4">
@@ -50,7 +56,7 @@ export default function HomePage() {
       </header>
 
       {/* Progress Widget */}
-      <section className="mb-8 bg-gradient-to-br from-teal-500 to-teal-700 rounded-3xl p-6 text-white shadow-teal">
+      <section className="mb-8 bg-linear-to-br from-teal-500 to-teal-700 rounded-3xl p-6 text-white shadow-teal">
         <div className="flex justify-between items-center mb-4">
           <h2 className="font-semibold text-teal-50">আপনার অগ্রগতি</h2>
           <Link href="/bn/progress" className="text-xs bg-white/20 hover:bg-white/30 px-3 py-1.5 rounded-full transition-colors">
