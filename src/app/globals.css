@@ -113,3 +113,10 @@ button, a, [role="button"], [role="tab"] {
 .pb-safe {
   padding-bottom: max(env(safe-area-inset-bottom), 16px);
 }
+
+@keyframes scan {
+  0% { transform: translateY(0); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(320px); opacity: 0; }
+}
